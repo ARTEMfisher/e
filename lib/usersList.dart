@@ -1,3 +1,4 @@
+import 'package:elibrary/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:elibrary/api.dart';
     
@@ -12,6 +13,9 @@ class _UsersListState extends State<UsersList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Список пользователей'),
+      ),
       body: FutureBuilder<List<Map<String, dynamic>>>(
           future: fetchUsers(),
           builder: (context, snapshot) {
@@ -29,7 +33,16 @@ class _UsersListState extends State<UsersList> {
                   final user = snapshot.data![index];
                   return ListTile(
                     title: Text(user['username']),
-                    subtitle: Text('ID: ${user['id']}'),
+                    onTap: (){
+                      Navigator.pushNamed(
+                        context,
+                        AppRoutes.userInfo,
+                        arguments: {
+                          'username':user['username'],
+                          'userId':user['id'],
+                        }
+                        );
+                    },
                   );
                 },
               );

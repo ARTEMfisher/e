@@ -77,7 +77,8 @@ class _AuthoriseState extends State<Authorise> {
                               bool exists = await checkUser(_login, _password);
 
                               if (exists) {
-                                auth=true;
+                                
+                                setUserId(_login);
                                 if(_login=='admin'){
                                   isAdmin=true;
                                 }
@@ -89,12 +90,6 @@ class _AuthoriseState extends State<Authorise> {
                             }
                           },
                           child: const Text('Войти'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {  
-                            Navigator.pushNamed(context, AppRoutes.main);                                     
-                          },
-                          child: const Text('Войти без авторизации'),
                         ),
                         ElevatedButton(
                           onPressed: () {  

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:elibrary/widgets/appbar_mainpage.dart';
 import 'book.dart';
 import 'widgets/bookinfo.dart';
+import 'api.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -80,6 +81,7 @@ class _MainPageState extends State<MainPage> {
                                       showDialog(
                                         context: context,
                                         builder: (context) => BookInfo(
+                                          id: book.id,
                                           imageURL: book.imageUrl,
                                           name: book.title,
                                           author: book.author,

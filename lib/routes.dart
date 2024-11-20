@@ -5,6 +5,8 @@ import 'mainpage.dart';
 import 'reg.dart';
 import 'userpage.dart';
 import 'usersList.dart';
+import 'userInfo.dart';
+import 'requests.dart';
 
 
 class AppRoutes{
@@ -15,6 +17,8 @@ class AppRoutes{
   static const String admin = '/admin';
   static const String user = '/user';
   static const String usersList = '/usersList';
+  static const String userInfo = '/userInfo';
+  static const String requestsList = '/requestsList';
 
   static Route<dynamic> generateRoute(RouteSettings settings){
     switch(settings.name){
@@ -30,6 +34,16 @@ class AppRoutes{
         return MaterialPageRoute(builder: (_)=> UserPage());
       case usersList:
         return MaterialPageRoute(builder: (_)=> UsersList());
+      case userInfo:
+      final args = settings.arguments as Map<String, dynamic>;
+      return MaterialPageRoute(
+        builder: (_) => UserInfo(
+          userId: args['userId'],  // Только userId
+        ),
+      );
+
+      case requestsList:
+        return MaterialPageRoute(builder: (_)=> RequestsList());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

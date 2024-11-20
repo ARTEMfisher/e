@@ -1,0 +1,76 @@
+showDialog(context: context, builder: (context) {
+                        return AlertDialog(
+                          title: Text(user['username']),
+                          content: SingleChildScrollView(
+                            physics: NeverScrollableScrollPhysics(),
+                            child: Flexible(
+                              child: ListView(
+                                                  
+                                children: [
+                                  Card(child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text('sdfasdfhasgdhfjgshdjgfjhasdgfjhgasdhjfgahjsdgfhjagdskhfjgakjhsdgfkajhsdfjhaghsfcbajhgrfjhbahcjbahrbgvhsbfvhagsfhasdkvakjlgfhabrhfgalhkcsbvkhagshfkjsdhfkalhfd'),
+                                  )),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  Text(user['username']),
+                                  
+                                ],
+                              ),
+                            ),
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Закрыть'),
+                            ),
+                          ],
+                        );
+                      });

@@ -1,10 +1,13 @@
+import 'package:elibrary/variables.dart';
 import 'package:flutter/material.dart';
+import 'package:elibrary/api.dart';
 
 class BookInfo extends StatefulWidget {
   final String name;
   final String author;
   final bool isFree;
   final String imageURL;
+  final int id;
 
   const BookInfo({
     Key? key,
@@ -12,6 +15,7 @@ class BookInfo extends StatefulWidget {
     required this.author,
     required this.isFree,
     required this.imageURL,
+    required this.id,
   }) : super(key: key);
 
   @override
@@ -38,8 +42,8 @@ class _BookInfoState extends State<BookInfo> {
       actions: [
   if (widget.isFree) 
     TextButton(
-      onPressed: () {
-        
+      onPressed: () { 
+          createRequest(id!, widget.id);
       },
       child: const Text('Забронировать'),
     ),

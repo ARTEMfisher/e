@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:elibrary/auth.dart';
 import 'package:elibrary/routes.dart';
 
 void main() {
@@ -16,7 +15,6 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.auth,
       debugShowCheckedModeBanner: false,
       theme:ThemeData.dark(),
-      //home: Authorise(),
     );
   }
 }
